@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <title>Document</title>
+    <style>
+       .header {
+    background-color: aquamarine;
+    grid-column: 1/4;
+    padding: 2%;
+    text-align: center;
+}
+.sidebar {
+    background-color: blueviolet;
+    padding: 5%;
+    text-align: center;
+} 
+.main {
+    background-color: blue;
+    padding: 2%;
+    text-align: center;
+    }
+.add {
+    background-color: bisque; 
+    padding: 2%;
+    text-align: center;        
+}
+.main_add {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5%;
+    gap: 5%;
+    }
+#add1 {
+   grid-area: 1 / 1 / 2 / 3;
+}
+#add2 {
+   grid-area: 1 / 3 / 2 / 5;
+}
+#add3 {
+    grid-area: 2/1/3/5;
+}
+@media screen and (min-width: 1024px) {
+
+    .conteiner {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20% 1fr 20%;
+    height:100vh;
+    font-size: 2em;
+}
+    .footer {
+    display: grid;
+    background-color: brown;
+    grid-column: 1/4; 
+    padding: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2%;
+    justify-content: space-between;
+    }           
+
+    .section {
+    background-color: aqua;
+    padding: 10%;
+    text-align: center;
+    
+} 
+}
+@media screen and (max-width: 1023px ) {
+    .footer {
+        display: none;
+    }
+    }    
+
+
+
+
+.bottle {
+    max-width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="conteiner">
+        <header class="header">Шапка страницы</header>        
+        <main class="main">Основная часть
+            <div class="main_add">
+            <div class="add" id="add1">Еще1</div>
+            <div class="add" id="add2">Еще2</div>
+            <div class="add" id="add3">Еще3</div>
+            </div>
+        </main>
+        <aside class="sidebar">Боковая область
+            <img class="bottle" src="assets/images/bottle3.png" alt="Картинка">
+        </aside>
+        <footer class="footer">
+            <div class="section">Секция футера 1</div>
+            <div class="section">Секция футера 2</div>
+            <div class="section">Секция футера 3</div>
+            <div class="section">Секция футера 4</div>
+
+        </footer>
+        
+    </div>
+</body>
+</html>
